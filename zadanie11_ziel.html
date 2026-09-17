@@ -1,0 +1,22 @@
+<html> 
+         <body> 
+          <div style="color:green;font-size:50px;"> 
+            <script language="JavaScript"> 
+// Gracjan Zielewski 2KP   17.09.2026 
+// Zadanie 11  
+              var D1_ziel=prompt("Data1=",""); 
+              var D2_ziel=prompt("Data2=",""); 
+              var sekund; 
+              var a=parseFloat(D1_ziel); 
+              var b=parseFloat(D2_ziel); 
+                sekund=(a-b)*24*60*60; 
+              document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>"); 
+                function okno_zamknij_ziel() 
+                 { 
+                   window.close() 
+                 } 
+              </script> 
+            </div> 
+          <input type="button" value="zamknij okno" onclick="okno_zamknij_ziel()"/> 
+        </body> 
+       </html> 
