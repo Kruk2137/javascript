@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Zadanie 23
+</title>
+<script language="JavaScript">
+function ObliczWszystko()
+{
+var d_ziel = document.getElementsByName('bok_d')[0].value;
+var x_ziel = document.getElementsByName('bok_x')[0].value;
+Drabina(d_ziel, x_ziel);
+Alfa(d_ziel, x_ziel);
+}
+
+function Drabina(d_ziel_param, x_ziel_param)
+{
+c_ziel=parseFloat(d_ziel_param)
+d_ziel=parseFloat(x_ziel_param)
+Drabina_wynik_ziel=Math.sqrt((c_ziel*c_ziel)+(d_ziel*d_ziel))
+document.getElementsByName('drab')[0].value=Drabina_wynik_ziel.toFixed(2);
+}
+
+function Alfa(d_ziel_param, x_ziel_param)
+{
+c_ziel=parseFloat(d_ziel_param)
+d_ziel=parseFloat(x_ziel_param)
+var sinA_ziel = c_ziel/Math.sqrt((c_ziel*c_ziel)+(d_ziel*d_ziel));
+var aRad_ziel = Math.asin(sinA_ziel);
+var aDeg_ziel = aRad_ziel * (180 / Math.PI);
+Alfa_wynik_ziel=aDeg_ziel;
+document.getElementsByName('alfa')[0].value=Alfa_wynik_ziel.toFixed(2);
+}
+
+function okno_zamknij_ziel()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie odległość od drabiny i kąta
+<br> <br>
+
+Podaj d=
+<input size="6" name="bok_d">
+Podaj x=
+<input size="6" name="bok_x">
+<br> <br>
+<input type="button" value="oblicz" onclick="ObliczWszystko()">
+<br> <br>
+Drabina=
+<input size="6" name="drab">
+Alfa=
+<input size="6" name="alfa">
+
+<br> <br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ziel()"/>
+</body>
+</html>

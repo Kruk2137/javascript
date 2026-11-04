@@ -1,0 +1,27 @@
+<html> 
+  <body> 
+    <div style="color: darkblue; font-size: 40px;"> 
+      <script language="JavaScript"> 
+        var N0_ziel = prompt("Podaj początkową ilość atomów N0 [sztuk]:", ""); 
+        var t_ziel = prompt("Podaj czas t [lat]:", ""); 
+        var T12_ziel = prompt("Podaj czas połowicznego zaniku T1/2 [lat]:", ""); 
+     
+        N0_ziel = parseFloat(N0_ziel);
+        t_ziel = parseFloat(t_ziel);
+        T12_ziel = parseFloat(T12_ziel);
+
+        var lambda_ziel = Math.LN2 / T12_ziel;
+        var N_wynik_ziel = N0_ziel * Math.pow(Math.E, -(lambda_ziel * t_ziel));
+
+        var lambda_format = lambda_ziel.toFixed(7);
+        var N_format = N_wynik_ziel.toFixed(7);
+
+        document.write("N0=" + N0_ziel + "[sztuk]<br>"); 
+        document.write("t=" + t_ziel + "[lat]<br>");
+        document.write("T1/2=" + T12_ziel + "[lat]<br>");
+        document.write("Lambda=" + lambda_format + "[1/rok]<br>");
+        document.write("N=" + N_format + "[sztuk]<br>");
+      </script> 
+    </div> 
+  </body> 
+</html>

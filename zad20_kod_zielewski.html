@@ -1,0 +1,65 @@
+<html> 
+   <body> 
+     <textarea cols="160" rows="55"> 
+<html>
+    <head>
+     <meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+    </head>
+    <body>
+    <script type="text/javascript">
+     function AB_ziel()
+     {
+     var xa_ziel= parseFloat(document.getElementById('xa_ziel').value);
+     var ya_ziel= parseFloat(document.getElementById('ya_ziel').value);
+     var xb_ziel= parseFloat(document.getElementById('xb_ziel').value);
+     var yb_ziel= parseFloat(document.getElementById('yb_ziel').value);
+     var xc_ziel= parseFloat(document.getElementById('xc_ziel').value);
+     var yc_ziel= parseFloat(document.getElementById('yc_ziel').value);
+     var ab_ziel= Math.sqrt(Math.pow(xa_ziel-xb_ziel,2)+Math.pow(ya_ziel-yb_ziel,2));
+     document.getElementById("nazwa").innerHTML ="Bok AB= "+ab_ziel.toFixed(2)+"cm";
+     }
+     function BC_ziel()
+     {
+    var xa_ziel= parseFloat(document.getElementById('xa_ziel').value);
+    var ya_ziel= parseFloat(document.getElementById('ya_ziel').value);
+    var xb_ziel= parseFloat(document.getElementById('xb_ziel').value);
+    var yb_ziel= parseFloat(document.getElementById('yb_ziel').value);
+    var xc_ziel= parseFloat(document.getElementById('xc_ziel').value);
+    var yc_ziel= parseFloat(document.getElementById('yc_ziel').value);
+    var bc_ziel= Math.sqrt(Math.pow(xb_ziel-xc_ziel,2)+Math.pow(yb_ziel-yc_ziel,2));
+     document.getElementById("nazwa").innerHTML ="Bok BC= "+bc_ziel.toFixed(2)+"cm";
+     }
+     function CA_ziel()
+     {
+    var xa_ziel= parseFloat(document.getElementById('xa_ziel').value);
+    var ya_ziel= parseFloat(document.getElementById('ya_ziel').value);
+    var xb_ziel= parseFloat(document.getElementById('xb_ziel').value);
+    var yb_ziel= parseFloat(document.getElementById('yb_ziel').value);
+    var xc_ziel= parseFloat(document.getElementById('xc_ziel').value);
+    var yc_ziel= parseFloat(document.getElementById('yc_ziel').value);
+    var ca_ziel= Math.sqrt(Math.pow(xc_ziel-xa_ziel,2)+Math.pow(yc_ziel-ya_ziel,2));
+     document.getElementById("nazwa").innerHTML ="Bok CA= "+ca_ziel.toFixed(2)+"cm";
+     }
+    function okno_zamknij_ziel()
+{
+window.close()
+}
+</script>
+     <h1>Boki trójkąta ABC</h1><br><br>
+     Podaj x punktu a: <input type="text" id="xa_ziel" value="podaj punkt"><br><br><br>
+     Podaj y punktu a: <input type="text" id="ya_ziel" value="podaj punkt"><br><br><br>
+     Podaj x punktu b: <input type="text" id="xb_ziel" value="podaj punkt"><br><br><br>
+     Podaj y punktu b: <input type="text" id="yb_ziel" value="podaj punkt"><br><br><br>
+     Podaj x punktu c: <input type="text" id="xc_ziel" value="podaj punkt"><br><br><br>
+     Podaj y punktu c: <input type="text" id="yc_ziel" value="podaj punkt"><br><br><br>
+     <input type="button" name="bok" value="Oblicz bok AB" Onclick="AB_ziel()"><br><br>
+     <input type="button" name="bok" value="Oblicz bok BC" Onclick="BC_ziel()"><br><br> 
+     <input type="button" name="bok" value="Oblicz bok CA" Onclick="CA_ziel()"><br><br>
+     <div style="color:red;font-size:50px;"id="nazwa"></div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ziel()"/>
+</body>
+</html>
+</textarea> 
+    </body> 
+</html> 

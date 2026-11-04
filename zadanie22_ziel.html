@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Zadanie 22</title>
+<script language="JavaScript">
+function Pole_ziel()
+{
+    var a_dana_ziel = parseFloat(document.getElementById('a_dana_ziel').value);
+    var b_dana_ziel = parseFloat(document.getElementById('b_dana_ziel').value);
+    var wynik_ziel = a_dana_ziel * b_dana_ziel;
+    
+    document.getElementById('pole').value = wynik_ziel.toFixed(2);
+    alert("Pole=" + wynik_ziel.toFixed(2) + " cm^2");
+    document.getElementById('wyprowadz_pole_ziel').innerHTML = "Pole=" + wynik_ziel.toFixed(2) + " cm^2";
+}
+
+function obwod_ziel()
+{
+    var a_dana_ziel = parseFloat(document.getElementById('a_dana_ziel').value);
+    var b_dana_ziel = parseFloat(document.getElementById('b_dana_ziel').value);
+    var wynik_ziel = 2 * (a_dana_ziel + b_dana_ziel);
+    
+    document.getElementById('obw').value = wynik_ziel.toFixed(2);
+    alert("Obwod=" + wynik_ziel.toFixed(2) + " cm");
+    document.getElementById('wyprowadz_obwod_ziel').innerHTML = "Obwod=" + wynik_ziel.toFixed(2) + " cm";
+}
+
+function okno_zamknij_ziel()
+{
+    window.close();
+}
+</script>
+</head>
+<body>
+Temat: Obliczenie pola oraz obwodu prostokąta.
+<br><br>
+
+Podaj a= <input size="6" id="a_dana_ziel">
+Podaj b= <input size="6" id="b_dana_ziel">
+<br><br>
+
+<input type="button" value="Oblicz pole" onclick="Pole_ziel()">
+<input type="button" value="Oblicz obwod" onclick="obwod_ziel()">
+<br><br>
+
+pole= <input size="6" id="pole">
+obw= <input size="6" id="obw">
+<br><br>
+
+<div id="wyprowadz_pole_ziel"></div>
+<div id="wyprowadz_obwod_ziel"></div>
+<br>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_ziel()"/>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html> 
+   <body> 
+     <textarea cols="160" rows="55"> 
+<html> 
+  <body> 
+    <div style="color:green;font-size:49px;"> 
+      <script language="JavaScript"> 
+        var x1_ziel = prompt("x1=", ""); 
+        var x2_ziel = prompt("x2=", ""); 
+     
+        x1_ziel = parseFloat(x1_ziel);
+        x2_ziel = parseFloat(x2_ziel);
+
+        var x1_ziel_rad = ((Math.PI * x1_ziel) / 180).toFixed(2);
+        var x2_ziel_rad = ((Math.PI * x2_ziel) / 180).toFixed(2);
+        var y1_ziel = (3 * Math.pow(x1_ziel, 7/9)).toFixed(2);
+        var y2_ziel = (2 * Math.cos(x1_ziel_rad) + 3 * Math.sin(x1_ziel_rad)).toFixed(2);
+        var y3_ziel = (Math.pow(Math.pow(x1_ziel, 5) + 2 * Math.pow(x2_ziel, 1), 1/3) * Math.abs(x1_ziel - x2_ziel)).toFixed(2);
+        
+
+        document.write("x1=" + x1_ziel + " &nbsp &nbsp &nbsp &nbsp &nbsp x2=" + x2_ziel + "<br>"); 
+        document.write("x1_r=" + x1_ziel_rad + "&nbsp &nbsp &nbsp &nbsp &nbsp x2_r=" + x2_ziel_rad + "<br>");
+        document.write("y1=" + y1_ziel + "<br>");
+        document.write("y2=" + y2_ziel + "<br>");
+        document.write("y3=" + y3_ziel + "<br>");
+        
+
+
+        function okno_zamknij_ziel() {
+          window.close();
+        } 
+      </script> 
+    </div> 
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_ziel()"/> 
+  </body> 
+</html>
+</textarea> 
+    </body> 
+</html> 
